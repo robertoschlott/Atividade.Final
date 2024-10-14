@@ -1,15 +1,13 @@
 document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault();
 
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
 
-    // Adiciona o cadastro à tabela
     const tabelaCadastros = document.getElementById('tabelaCadastros');
     const novaLinha = tabelaCadastros.insertRow();
     novaLinha.insertCell(0).innerText = nome;
     novaLinha.insertCell(1).innerText = email;
 
-    // Limpa os campos do formulário
     document.getElementById('cadastroForm').reset();
 });
